@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="10dp">
+
+    <EditText
+        android:id="@+id/et_register_phone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:drawableLeft="@mipmap/login_phone"
+        android:hint="输入手机号"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/et_register_password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:drawableLeft="@mipmap/login_password"
+        android:hint="请输入密码"
+        app:layout_constraintTop_toBottomOf="@id/et_register_phone" />
+
+    <EditText
+        android:id="@+id/et_register_passwordAgain"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:drawableLeft="@mipmap/login_password"
+        android:hint="确认密码"
+        app:layout_constraintTop_toBottomOf="@id/et_register_password" />
+
+    <EditText
+        android:id="@+id/et_register_location"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:drawableLeft="@mipmap/login_location"
+        android:hint="选择所属省市区/县"
+        app:layout_constraintTop_toBottomOf="@id/et_register_passwordAgain" />
+
+    <EditText
+        android:id="@+id/et_register_invCode"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:drawableLeft="@mipmap/login_backups"
+        android:hint="输入邀请码(必填)"
+        app:layout_constraintTop_toBottomOf="@id/et_register_location" />
+
+    <EditText
+        android:id="@+id/et_register_verCode"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:drawableLeft="@mipmap/login_vercode"
+        android:hint="验证码"
+        app:layout_constraintTop_toBottomOf="@id/et_register_invCode" />
+
+    <com.yltclient.common.GradientColorTextViewForManagerName
+        android:id="@+id/tv_register_verCode"
+        android:layout_width="77dp"
+        android:layout_height="33dp"
+        android:background="@drawable/shape_register_ver_bg"
+        android:gravity="center"
+        android:text="发送验证码"
+        android:textSize="8sp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@id/et_register_verCode" />
+
+    <ImageView
+        android:id="@+id/img_register_btn"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="10dp"
+        android:src="@mipmap/login_button"
+        app:layout_constraintTop_toBottomOf="@id/et_register_verCode" />
+
+    <TextView
+        android:id="@+id/tv_register_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:gravity="center"
+        android:src="@mipmap/login_button"
+        android:text="注册"
+        android:textColor="#ffffff"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/et_register_verCode" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:padding="5dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/img_register_btn">
+
+        <CheckBox
+            android:id="@+id/rb_register_accept"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/Widget.AppCompat.CompoundButton.RadioButton"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_register_text" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="立即阅读并同意"
+            android:textColor="#B8B7B7"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/tv_register_agreement"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="《168云算力用户协议》"
+            android:textColor="#79F87E"
+            android:textSize="12sp" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

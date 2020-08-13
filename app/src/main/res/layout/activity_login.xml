@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/shape_login_bgcolor"
+    tools:context=".login.LoginActivity">
+
+    <ImageView
+        android:id="@+id/img_login_bg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        android:src="@mipmap/login_logo"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/login_ll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="25dp"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/shape_login_background"
+        android:orientation="vertical"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/img_login_bg"
+        android:padding="5dp">
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/login_tabLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            app:tabIndicatorColor="#BAF378"
+            app:tabRippleColor="#FBF8F8"
+            app:tabIndicatorFullWidth="false" />
+
+        <com.yltclient.common.CustomViewPager
+            android:id="@+id/login_viewPager"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_login_watch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="先去看看>"
+        android:layout_marginTop="5dp"
+        android:textColor="#EFEFEF"
+        app:layout_constraintTop_toBottomOf="@id/login_ll"
+        app:layout_constraintRight_toRightOf="@id/login_ll"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
