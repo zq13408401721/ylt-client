@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">YltClient</string>
+    <string name="title_home">主页</string>
+    <string name="title_news">资讯</string>
+    <string name="title_yun">云算力</string>
+    <string name="title_mine">我的矿场</string>
+    <string name="title_owns">个人中心</string>
 </resources>
