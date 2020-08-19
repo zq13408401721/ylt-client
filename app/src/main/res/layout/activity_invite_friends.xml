@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/shape_login_bgcolor"
+    tools:context=".ui.own.activities.InviteFriendsActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:id="@+id/img_back"
+            android:src="@drawable/ic_outline_back_white"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <TextView
+            android:text="邀请好友"
+            android:textSize="18sp"
+            android:layout_gravity="center"
+            android:textColor="#ffffff"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    </androidx.appcompat.widget.Toolbar>
+
+    <RelativeLayout
+        android:layout_marginTop="130dp"
+        android:layout_marginHorizontal="41dp"
+        android:layout_marginBottom="162dp"
+        android:background="@drawable/shape_login_background"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_centerHorizontal="true"
+            android:text="DS55421"
+            android:textSize="21sp"
+            android:textColor="#222222"
+            android:layout_marginTop="37dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <ImageView
+            android:id="@+id/img_qr"
+            android:layout_below="@id/tv_name"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="23dp"
+            android:src="@mipmap/ic_launcher"
+            android:layout_width="170dp"
+            android:layout_height="170dp"/>
+
+        <TextView
+            android:id="@+id/tv_copy_links"
+            android:text="复制链接"
+            android:textSize="17sp"
+            android:textColor="#ffffff"
+            android:background="@mipmap/request_button_bg"
+            android:layout_below="@id/img_qr"
+            android:gravity="center"
+            android:layout_marginTop="36dp"
+            android:layout_centerHorizontal="true"
+            android:layout_width="168dp"
+            android:layout_height="42dp"/>
+
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/img_button"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:background="@drawable/shape_login_background"
+        android:layout_marginBottom="15dp"
+        android:layout_width="134dp"
+        android:layout_height="5dp"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
