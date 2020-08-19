@@ -22,7 +22,7 @@
         android:title="@string/title_mine" />
 
     <item
-        android:id="@+id/navigation_owns"
+        android:id="@+id/navigation_own"
         android:icon="@mipmap/ic_launcher"
         android:title="@string/title_owns" />
 
