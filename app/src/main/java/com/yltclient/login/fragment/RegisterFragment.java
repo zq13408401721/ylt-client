@@ -1,26 +1,24 @@
 package com.yltclient.login.fragment;
 
-import android.content.Intent;
+import android.graphics.Color;
+import android.graphics.LinearGradient;
+import android.graphics.Shader;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.fragment.app.Fragment;
 
 import com.yltclient.R;
-import com.yltclient.login.activitys.AgreementActivity;
 
 import butterknife.BindView;
-import butterknife.ButterKnife;
-import butterknife.OnClick;
-import butterknife.Unbinder;
 
 public class RegisterFragment extends Fragment {
 
@@ -42,19 +40,13 @@ public class RegisterFragment extends Fragment {
     ImageView imgRegisterBtn;
     @BindView(R.id.tv_register_text)
     TextView tvRegisterText;
-    @BindView(R.id.rb_register_accept)
-    CheckBox rbRegisterAccept;
-    @BindView(R.id.tv_register_agreement)
-    TextView tvRegisterAgreement;
 
-    private TextView textView;
-    private Unbinder bind;
+    private  TextView textView;
 
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View inflate = inflater.inflate(R.layout.fragment_register, container, false);
-        bind = ButterKnife.bind(this, inflate);
         return inflate;
     }
 
@@ -67,26 +59,14 @@ public class RegisterFragment extends Fragment {
     @Override
     public void setUserVisibleHint(boolean isVisibleToUser) {
         super.setUserVisibleHint(isVisibleToUser);
-        if (isVisibleToUser) {
+        if(isVisibleToUser){
             textView.setVisibility(View.GONE);
-        } else {
+        }else{
             textView.setVisibility(View.VISIBLE);
         }
     }
 
     public void setTextStatus(TextView tvLoginWatch) {
-        this.textView = tvLoginWatch;
-    }
-
-    @Override
-    public void onDestroy() {
-        super.onDestroy();
-        bind.unbind();
-    }
-
-    @OnClick(R.id.tv_register_agreement)
-    public void onViewClicked() {
-        Intent intent = new Intent(getActivity(), AgreementActivity.class);
-        startActivity(intent);
+        this.textView=tvLoginWatch;
     }
 }
