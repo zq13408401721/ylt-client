@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_home">
+
+    <fragment
+        android:id="@+id/navigation_home"
+        android:name="com.yltclient.ui.home.HomeFragment"
+        android:label="@string/title_home"
+        tools:layout="@layout/fragment_home" />
+
+    <fragment
+        android:id="@+id/navigation_news"
+        android:name="com.yltclient.ui.news.NewsFragment"
+        android:label="@string/title_news"
+        tools:layout="@layout/fragment_news" />
+
+    <fragment
+        android:id="@+id/navigation_yun"
+        android:name="com.yltclient.ui.yun.YunFragment"
+        android:label="@string/title_yun"
+        tools:layout="@layout/fragment_yun" />
+
+    <fragment
+        android:id="@+id/navigation_mine"
+        android:name="com.yltclient.ui.mine.MineFragment"
+        android:label="@string/title_mine"
+        tools:layout="@layout/fragment_mine" />
+
+    <fragment
+        android:id="@+id/navigation_own"
+        android:name="com.yltclient.ui.own.OwnFragment"
+        android:label="@string/title_owns"
+        tools:layout="@layout/fragment_owns" />
+
+</navigation>

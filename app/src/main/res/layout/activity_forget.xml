@@ -20,16 +20,7 @@
         android:background="@drawable/shape_login_background"
         android:layout_width="325dp"
         android:layout_height="400dp">
-
         <TextView
-            android:id="@+id/tv_forget_back"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="《"
-            app:layout_constraintLeft_toLeftOf="@id/forget_newpass"
-            app:layout_constraintTop_toTopOf="@+id/tv_froget_title"/>
-        <TextView
-            android:id="@+id/tv_froget_title"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
