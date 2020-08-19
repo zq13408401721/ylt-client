@@ -1,9 +1,7 @@
 package com.yltclient;
 
 import android.os.Bundle;
-import android.view.MenuItem;
 
-import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.navigation.NavController;
@@ -28,35 +26,11 @@ public class IndexcActivity extends AppCompatActivity {
         AppBarConfiguration appBarConfiguration = new AppBarConfiguration.Builder(
                 R.id.navigation_home, R.id.navigation_news, R.id.navigation_yun,R.id.navigation_mine,R.id.navigation_own)
                 .build();
+        navView.setItemIconTintList(null);
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment);
-        NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration);
+       // NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration);
         NavigationUI.setupWithNavController(navView, navController);
 
-        navView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
-            @Override
-            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-                navController.navigate(item.getItemId());
-                switch (item.getItemId()){
-                    case R.id.navigation_home:
-                        item.setIcon(R.mipmap.ic_launcher);
-                        return true;
-                    case R.id.navigation_news:
-                        item.setIcon(R.mipmap.ic_launcher);
-                        return true;
-                    case R.id.navigation_yun:
-                        item.setIcon(R.mipmap.ic_launcher);
-                        return true;
-                    case R.id.navigation_mine:
-                        item.setIcon(R.mipmap.ic_launcher);
-                        return true;
-                    case R.id.navigation_own:
-                        item.setIcon(R.mipmap.ic_launcher);
-                        return true;
-
-                }
-                return false;
-            }
-        });
 
     }
 }
