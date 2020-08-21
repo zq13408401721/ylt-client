@@ -3,8 +3,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="com.yltclient">
 
-    <uses-permission android:name="android.permission.INTERNET" />
-
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -12,14 +10,17 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ui.own.activities.IntegralTurnActivity"></activity>
-        <activity android:name=".ui.own.activities.BusinessSchoolActivity" />
+        <activity android:name=".ui.mine.activity.IncomeDetailActivity" />
         <activity android:name=".ui.own.activities.MyPromotionActivity" />
+        <activity android:name=".ui.own.activities.IntegralTurnActivity" />
+        <activity android:name=".ui.own.activities.BusinessSchoolActivity" />
+        <activity
+            android:name=".ui.own.activities.MyPromotionActivity"
+            tools:ignore="DuplicateActivity" />
         <activity android:name=".ui.own.activities.InviteFriendsActivity" />
-        <activity android:name=".ui.news.activity.NewInformationActivity"></activity>
-        <activity android:name=".ui.news.activity.NewDetailActivity" />
-        <activity android:name=".MainActivity" />
-        <activity android:name=".IndexcActivity" >
+        <activity
+            android:name=".IndexcActivity"
+            tools:ignore="DuplicateActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -27,7 +28,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".home.HomeActivity" />
-        <activity android:name=".login.activitys.AgreementActivity" />
-        <activity android:name=".ui.login.activitys.ForgetActivity" />
+        <activity android:name=".MainActivity" />
+        <activity android:name=".login.activitys.ForgetActivity" />
     </application>
+
 </manifest>
