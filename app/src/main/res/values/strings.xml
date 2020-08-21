@@ -5,6 +5,4 @@
     <string name="title_yun">云算力</string>
     <string name="title_mine">我的矿场</string>
     <string name="title_owns">个人中心</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

@@ -1,38 +1,38 @@
-package com.yltclient;
-
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.fragment.app.FragmentManager;
-import androidx.fragment.app.FragmentTransaction;
-import androidx.core.widget.NestedScrollView;
+package com.yltclient.login.activitys;
 
 import android.content.Context;
 import android.os.Bundle;
 import android.view.WindowManager;
+import android.widget.ImageView;
 
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.widget.NestedScrollView;
+
+import com.yltclient.R;
 import com.yltclient.common.MyView;
 
-public class MainActivity extends AppCompatActivity {
+import butterknife.BindView;
+import butterknife.ButterKnife;
+import butterknife.OnClick;
 
+public class AgreementActivity extends AppCompatActivity {
 
-    private MyView myView;
+    @BindView(R.id.myView)
+    MyView myView;
+    @BindView(R.id.scrollView)
     NestedScrollView scrollView;
+    @BindView(R.id.img_agreement_back)
+    ImageView imgAgreementBack;
     private int height = MyView.HEIGHT;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-        initView();
-    }
-
-    private void initView() {
         int width = ((WindowManager) this.getSystemService(Context.WINDOW_SERVICE)).getDefaultDisplay().getWidth();
-        this.setContentView(R.layout.activity_main);
-        myView = this.findViewById(R.id.myView);
-        scrollView = this.findViewById(R.id.scrollView);
+        setContentView(R.layout.activity_agreement);
+        ButterKnife.bind(this);
         myView.setW(width);
         myView.setH(height);
-
         scrollView.setOnScrollChangeListener(new NestedScrollView.OnScrollChangeListener() {
             @Override
             public void onScrollChange(NestedScrollView v, int scrollX, int scrollY, int oldScrollX, int oldScrollY) {
@@ -40,5 +40,11 @@ public class MainActivity extends AppCompatActivity {
                 myView.setH(height);
             }
         });
+
+    }
+
+    @OnClick(R.id.img_agreement_back)
+    public void onViewClicked() {
+        finish();
     }
 }
