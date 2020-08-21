@@ -1,4 +1,4 @@
-package com.yltclient.login.activitys;
+package com.yltclient.ui.login.activitys;
 
 import android.os.Bundle;
 import android.widget.ImageView;

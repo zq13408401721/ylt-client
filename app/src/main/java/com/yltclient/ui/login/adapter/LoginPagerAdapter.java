@@ -1,4 +1,4 @@
-package com.yltclient.login.adapter;
+package com.yltclient.ui.login.adapter;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;

@@ -1,4 +1,4 @@
-package com.yltclient.login.fragment;
+package com.yltclient.ui.login.fragment;
 
 import android.content.Intent;
 import android.os.Bundle;

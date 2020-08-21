@@ -1,7 +1,6 @@
-package com.yltclient.login;
+package com.yltclient.ui.login;
 
 import android.os.Bundle;
-import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -12,9 +11,9 @@ import androidx.viewpager.widget.ViewPager;
 import com.google.android.material.tabs.TabLayout;
 import com.yltclient.R;
 import com.yltclient.common.CustomViewPager;
-import com.yltclient.login.adapter.LoginPagerAdapter;
-import com.yltclient.login.fragment.LoginFragment;
-import com.yltclient.login.fragment.RegisterFragment;
+import com.yltclient.ui.login.adapter.LoginPagerAdapter;
+import com.yltclient.ui.login.fragment.LoginFragment;
+import com.yltclient.ui.login.fragment.RegisterFragment;
 
 import java.util.ArrayList;
 import java.util.List;
