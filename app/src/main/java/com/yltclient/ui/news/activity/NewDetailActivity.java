@@ -49,6 +49,7 @@ public class NewDetailActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 finish();
+
             }
         });
     }
