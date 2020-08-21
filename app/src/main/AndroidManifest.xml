@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
     package="com.yltclient">
+
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
@@ -10,23 +11,32 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+
         <activity android:name=".ui.own.activities.MyPromotionActivity"></activity>
         <activity android:name=".ui.own.activities.InviteFriendsActivity" />
         <activity android:name=".IndexcActivity" />
         <activity android:name=".login.activitys.ForgetActivity" />
 
-        <activity
-            android:name=".login.LoginActivity"
-            tools:ignore="DuplicateActivity">
+
+
+
+        <activity android:name=".login.LoginActivity" />
+        <activity android:name=".ui.news.activity.NewInformationActivity"></activity>
+        <activity android:name=".ui.news.activity.NewDetailActivity" />
+
+        <activity android:name=".MainActivity" >
+
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
         <activity android:name=".home.HomeActivity" />
         <activity android:name=".login.activitys.AgreementActivity" />
-        <activity android:name=".MainActivity" />
+
     </application>
 
 </manifest>

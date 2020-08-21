@@ -1,6 +1,8 @@
 package com.yltclient;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 import androidx.core.widget.NestedScrollView;
 
 import android.content.Context;
@@ -19,7 +21,12 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        int width = ((WindowManager)this.getSystemService(Context.WINDOW_SERVICE)).getDefaultDisplay().getWidth();
+        setContentView(R.layout.activity_main);
+        initView();
+    }
+
+    private void initView() {
+        int width = ((WindowManager) this.getSystemService(Context.WINDOW_SERVICE)).getDefaultDisplay().getWidth();
         this.setContentView(R.layout.activity_main);
         myView = this.findViewById(R.id.myView);
         scrollView = this.findViewById(R.id.scrollView);
@@ -29,7 +36,7 @@ public class MainActivity extends AppCompatActivity {
         scrollView.setOnScrollChangeListener(new NestedScrollView.OnScrollChangeListener() {
             @Override
             public void onScrollChange(NestedScrollView v, int scrollX, int scrollY, int oldScrollX, int oldScrollY) {
-                height = (int) (MyView.HEIGHT-0.4*scrollY);
+                height = (int) (MyView.HEIGHT - 0.4 * scrollY);
                 myView.setH(height);
             }
         });
