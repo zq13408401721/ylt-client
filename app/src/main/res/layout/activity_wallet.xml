@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.own.activities.WalletActivity">
+    tools:context="com.yltclient.ui.own.activities.WalletActivity">
 
     <RelativeLayout
         android:id="@+id/wallet_re"
