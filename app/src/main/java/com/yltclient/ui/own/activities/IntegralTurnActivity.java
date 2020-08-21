@@ -1,5 +1,6 @@
 package com.yltclient.ui.own.activities;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
@@ -61,10 +62,12 @@ public class IntegralTurnActivity extends AppCompatActivity implements View.OnCl
                 finish();
                 break;
             case R.id.tv_integral_record:
+                startActivity(new Intent(IntegralTurnActivity.this,TurnRecordActivity.class));
                 break;
             case R.id.img_sweep:
                 break;
             case R.id.txt_integral:
+                startActivity(new Intent(IntegralTurnActivity.this,IntegralActivity.class));
                 break;
             case R.id.tv_sure:
                 break;
