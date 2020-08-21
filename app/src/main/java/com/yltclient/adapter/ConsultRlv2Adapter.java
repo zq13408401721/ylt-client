@@ -21,6 +21,11 @@ import butterknife.ButterKnife;
 public class ConsultRlv2Adapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
     private Context context;
     private ArrayList<Rlv3Bean> list;
+    private onItemClickListener onItemClickListener;
+
+    public void setOnItemClickListener(ConsultRlv2Adapter.onItemClickListener onItemClickListener) {
+        this.onItemClickListener = onItemClickListener;
+    }
 
     public ConsultRlv2Adapter(Context context, ArrayList<Rlv3Bean> list) {
         this.context = context;
@@ -40,6 +45,12 @@ public class ConsultRlv2Adapter extends RecyclerView.Adapter<RecyclerView.ViewHo
         ViewHolder viewHolder = (ViewHolder) holder;
         viewHolder.tvTitleRlv2Itme.setText(list.get(position).getTitle());
         viewHolder.tvDateRlv2Item.setText(list.get(position).getDate());
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                onItemClickListener.onItemClick(position);
+            }
+        });
     }
 
     @Override
@@ -59,5 +70,9 @@ public class ConsultRlv2Adapter extends RecyclerView.Adapter<RecyclerView.ViewHo
             super(view);
             ButterKnife.bind(this, view);
         }
+    }
+
+    public interface onItemClickListener {
+        void onItemClick(int position);
     }
 }

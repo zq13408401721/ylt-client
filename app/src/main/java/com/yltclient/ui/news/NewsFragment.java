@@ -24,6 +24,7 @@ import com.yltclient.bean.Bean;
 import com.yltclient.bean.Rlv2Bean;
 import com.yltclient.bean.Rlv3Bean;
 import com.yltclient.ui.news.activity.NewDetailActivity;
+import com.yltclient.ui.news.activity.NewInformationActivity;
 
 import java.util.ArrayList;
 
@@ -105,6 +106,13 @@ public class NewsFragment extends Fragment {
         consultRlv2Adapter = new ConsultRlv2Adapter(getActivity(), rlv3Beans);
         mRlvHangye.setAdapter(consultRlv2Adapter);
         consultRlv1adapter.notifyDataSetChanged();
+        consultRlv2Adapter.setOnItemClickListener(new ConsultRlv2Adapter.onItemClickListener() {
+            @Override
+            public void onItemClick(int position) {
+                Intent intent3 = new Intent(getActivity(), NewInformationActivity.class);
+                startActivity(intent3);
+            }
+        });
     }
 
     private void setRlv2() {
@@ -132,18 +140,33 @@ public class NewsFragment extends Fragment {
         ConsultAdapter consultAdapter = new ConsultAdapter(getActivity(), beans);
         mRlvConsultXitong.setAdapter(consultAdapter);
         consultAdapter.notifyDataSetChanged();
+        consultAdapter.setOnItemClickListener(new ConsultAdapter.onItemClickListener() {
+            @Override
+            public void onItemClick(int position) {
+                Intent intent = new Intent(getActivity(), NewDetailActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 
-    @OnClick({R.id.tv_xitonggonggao, R.id.tv_consult_gengduo})
+    @OnClick({R.id.tv_xitonggonggao, R.id.tv_consult_gengduo, R.id.tv_hangyezhixun, R.id.tv_consult_gengduo2})
     public void onViewClicked(View view) {
         switch (view.getId()) {
-            case R.id.tv_xitonggonggao://系统公告监听
+            case R.id.tv_xitonggonggao://系统公告
                 Intent intent = new Intent(getActivity(), NewDetailActivity.class);
                 startActivity(intent);
                 break;
-            case R.id.tv_consult_gengduo://系统更多监听
+            case R.id.tv_consult_gengduo://系统公告更多
                 Intent intent1 = new Intent(getActivity(), NewDetailActivity.class);
                 startActivity(intent1);
+                break;
+            case R.id.tv_hangyezhixun://行业资讯
+                Intent intent2 = new Intent(getActivity(), NewInformationActivity.class);
+                startActivity(intent2);
+                break;
+            case R.id.tv_consult_gengduo2://行业资讯更多
+                Intent intent3 = new Intent(getActivity(), NewInformationActivity.class);
+                startActivity(intent3);
                 break;
         }
     }

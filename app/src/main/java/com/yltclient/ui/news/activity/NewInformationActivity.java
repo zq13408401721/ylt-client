@@ -12,8 +12,7 @@ import com.yltclient.R;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
-public class NewDetailActivity extends AppCompatActivity {
-
+public class NewInformationActivity extends AppCompatActivity {
     @BindView(R.id.toolbar_iv_back)
     ImageView toolbarIvBack;
     @BindView(R.id.toolbar_tv_title)
@@ -38,7 +37,7 @@ public class NewDetailActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_new_detail);
+        setContentView(R.layout.activity_new_information);
         ButterKnife.bind(this);
         initView();
         initListener();
@@ -54,6 +53,6 @@ public class NewDetailActivity extends AppCompatActivity {
     }
 
     private void initView() {
-
+        toolbarTvTitle.setText("资讯详情");
     }
 }
