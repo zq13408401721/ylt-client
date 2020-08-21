@@ -14,7 +14,8 @@
         <activity android:name=".ui.own.activities.MyPromotionActivity" />
         <activity android:name=".ui.own.activities.IntegralTurnActivity"></activity>
         <activity android:name=".ui.own.activities.BusinessSchoolActivity" />
-        <activity android:name=".ui.own.activities.MyPromotionActivity"></activity>
+        <activity android:name=".ui.own.activities.MyPromotionActivity"
+            tools:ignore="DuplicateActivity"></activity>
         <activity android:name=".ui.own.activities.InviteFriendsActivity" />
         <activity
             android:name=".IndexcActivity"
