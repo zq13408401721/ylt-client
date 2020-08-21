@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.yltclient">
 
     <uses-permission android:name="android.permission.INTERNET" />
@@ -11,9 +12,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".ui.mine.activity.IncomeDetailActivity"></activity>
+        <activity android:name=".ui.own.activities.MyPromotionActivity" />
         <activity android:name=".ui.own.activities.IntegralTurnActivity"></activity>
         <activity android:name=".ui.own.activities.BusinessSchoolActivity" />
-        <activity android:name=".ui.own.activities.MyPromotionActivity" />
         <activity android:name=".ui.own.activities.InviteFriendsActivity" />
         <activity android:name=".ui.news.activity.NewInformationActivity"></activity>
         <activity android:name=".ui.news.activity.NewDetailActivity" />
@@ -30,4 +32,5 @@
         <activity android:name=".home.HomeActivity" />
         <activity android:name=".login.activitys.AgreementActivity" />
     </application>
+
 </manifest>
