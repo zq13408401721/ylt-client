@@ -17,10 +17,10 @@
         <activity android:name=".ui.own.activities.InviteFriendsActivity" />
         <activity android:name=".ui.news.activity.NewInformationActivity"></activity>
         <activity android:name=".ui.news.activity.NewDetailActivity" />
-        <activity android:name=".IndexcActivity" />
+        <activity android:name=".MainActivity" />
         <activity android:name=".login.activitys.ForgetActivity" />
         <activity android:name=".login.LoginActivity" />
-        <activity android:name=".MainActivity" >
+        <activity android:name=".IndexcActivity" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

@@ -29,8 +29,6 @@ public class IntegralTurnActivity extends AppCompatActivity implements View.OnCl
     EditText etCount;
     @BindView(R.id.txt_integral)
     TextView txtIntegral;
-    @BindView(R.id.tv_get_integral)
-    TextView txtGetIntegral;
     @BindView(R.id.tv_sure)
     TextView tvSure;
 
