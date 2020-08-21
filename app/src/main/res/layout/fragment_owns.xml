@@ -9,14 +9,13 @@
     <com.google.android.material.appbar.AppBarLayout
         android:id="@+id/appbar"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:theme="@style/ToolBarTheme">
 
         <com.google.android.material.appbar.CollapsingToolbarLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            app:contentScrim="?attr/colorPrimary"
-            app:layout_scrollFlags="scroll|exitUntilCollapsed">
+            app:contentScrim="?attr/colorPrimary">
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
@@ -32,6 +31,7 @@
                     android:layout_height="200dp"
                     android:background="@drawable/shape_bg"
                     app:layout_constraintTop_toTopOf="parent" />
+
                 <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -40,257 +40,282 @@
 
                     <androidx.constraintlayout.widget.ConstraintLayout
                         android:id="@+id/constraint1"
-                        android:background="@mipmap/perinfo"
-                        android:layout_marginHorizontal="11dp"
                         android:layout_width="match_parent"
-                        android:layout_height="154dp">
+                        android:layout_height="154dp"
+                        android:layout_marginHorizontal="11dp"
+                        android:background="@mipmap/perinfo">
+
                         <ImageView
                             android:id="@+id/img_head"
                             android:layout_width="51dp"
                             android:layout_height="51dp"
-                            android:layout_marginTop="16dp"
                             android:layout_marginLeft="16dp"
+                            android:layout_marginTop="16dp"
                             android:src="@mipmap/defalthead"
                             app:layout_constraintLeft_toLeftOf="parent"
-                            app:layout_constraintTop_toTopOf="parent"/>
+                            app:layout_constraintTop_toTopOf="parent" />
 
                         <TextView
                             android:id="@+id/tv_name"
-                            android:text="点击登录"
-                            android:textSize="16sp"
-                            android:textColor="#222222"
                             android:layout_width="64dp"
                             android:layout_height="22.5dp"
                             android:layout_marginLeft="9.5dp"
                             android:layout_marginTop="3dp"
+                            android:text="点击登录"
+                            android:textColor="#222222"
+                            android:textSize="16sp"
                             app:layout_constraintLeft_toRightOf="@id/img_head"
-                            app:layout_constraintTop_toTopOf="@id/img_head"/>
+                            app:layout_constraintTop_toTopOf="@id/img_head" />
 
                         <TextView
-                            android:background="@drawable/shape_temporary_bg"
                             android:id="@+id/tv_temporary"
-                            android:textSize="9sp"
                             android:layout_width="49dp"
                             android:layout_height="18dp"
-                            android:layout_marginTop="2dp"
                             android:layout_marginLeft="9.5dp"
-                            android:text="临时用户"
+                            android:layout_marginTop="2dp"
+                            android:background="@drawable/shape_temporary_bg"
                             android:gravity="center"
+                            android:text="临时用户"
                             android:textColor="@color/white"
+                            android:textSize="9sp"
                             app:layout_constraintLeft_toRightOf="@id/img_head"
-                            app:layout_constraintTop_toBottomOf="@id/tv_name"/>
+                            app:layout_constraintTop_toBottomOf="@id/tv_name" />
 
                         <LinearLayout
-                            app:layout_constraintTop_toBottomOf="@id/img_head"
-                            android:orientation="horizontal"
-                            android:layout_marginTop="23dp"
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content">
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="23dp"
+                            android:orientation="horizontal"
+                            app:layout_constraintTop_toBottomOf="@id/img_head">
 
                             <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
                                 android:layout_weight="1"
                                 android:gravity="center"
-                                android:orientation="vertical"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content">
+                                android:orientation="vertical">
+
                                 <ImageView
                                     android:id="@+id/img_wallet"
-                                    android:src="@mipmap/wallet"
                                     android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"/>
+                                    android:layout_height="wrap_content"
+                                    android:src="@mipmap/wallet" />
+
                                 <TextView
                                     android:id="@+id/tv_wallet"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="5dp"
                                     android:text="钱包地址"
                                     android:textColor="#888888"
-                                    android:textSize="11sp"
-                                    android:layout_marginTop="5dp"
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"/>
+                                    android:textSize="11sp" />
                             </LinearLayout>
+
                             <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
                                 android:layout_weight="1"
                                 android:gravity="center"
-                                android:orientation="vertical"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content">
+                                android:orientation="vertical">
+
                                 <ImageView
                                     android:id="@+id/img_delivery_address"
-                                    android:src="@mipmap/delivery_address"
                                     android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"/>
+                                    android:layout_height="wrap_content"
+                                    android:src="@mipmap/delivery_address" />
+
                                 <TextView
                                     android:id="@+id/tv_delivery_address"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="5dp"
                                     android:text="收货地址"
                                     android:textColor="#888888"
-                                    android:textSize="11sp"
-                                    android:layout_marginTop="5dp"
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"/>
+                                    android:textSize="11sp" />
                             </LinearLayout>
+
                             <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
                                 android:layout_weight="1"
                                 android:gravity="center"
-                                android:orientation="vertical"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content">
+                                android:orientation="vertical">
+
                                 <ImageView
                                     android:id="@+id/img_security_center"
-                                    android:src="@mipmap/security_center"
                                     android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"/>
+                                    android:layout_height="wrap_content"
+                                    android:src="@mipmap/security_center" />
+
                                 <TextView
                                     android:id="@+id/tv_security_center"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="5dp"
                                     android:text="安全中心"
                                     android:textColor="#888888"
-                                    android:textSize="11sp"
-                                    android:layout_marginTop="5dp"
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"/>
+                                    android:textSize="11sp" />
                             </LinearLayout>
 
                         </LinearLayout>
 
                     </androidx.constraintlayout.widget.ConstraintLayout>
+
                     <androidx.constraintlayout.widget.ConstraintLayout
-                        android:layout_below="@id/constraint1"
-                        android:layout_marginTop="9dp"
-                        android:background="@drawable/shape_login_background"
-                        android:layout_marginHorizontal="11dp"
                         android:layout_width="match_parent"
-                        android:layout_height="241dp">
+                        android:layout_height="241dp"
+                        android:layout_below="@id/constraint1"
+                        android:layout_marginHorizontal="11dp"
+                        android:layout_marginTop="9dp"
+                        android:background="@drawable/shape_login_background">
 
                         <LinearLayout
                             android:id="@+id/linea1"
-                            android:orientation="vertical"
-                            app:layout_constraintLeft_toLeftOf="parent"
                             android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
                             android:layout_marginLeft="16dp"
                             android:gravity="center"
-                            android:layout_height="match_parent">
+                            android:orientation="vertical"
+                            app:layout_constraintLeft_toLeftOf="parent">
 
                             <ImageView
                                 android:id="@+id/img_invite_friends"
-                                android:src="@mipmap/invite_friends"
-                                android:layout_weight="1"
                                 android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"/>
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:src="@mipmap/invite_friends" />
+
                             <ImageView
                                 android:id="@+id/img_my_promotion"
-                                android:src="@mipmap/my_promotion"
-                                android:layout_weight="1"
                                 android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"/>
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:src="@mipmap/my_promotion" />
+
                             <ImageView
                                 android:id="@+id/img_business_school"
-                                android:src="@mipmap/business_school"
-                                android:layout_weight="1"
                                 android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"/>
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:src="@mipmap/business_school" />
+
                             <ImageView
                                 android:id="@+id/img_integral"
-                                android:src="@mipmap/integral"
-                                android:layout_weight="1"
                                 android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"/>
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:src="@mipmap/integral" />
+
                             <ImageView
                                 android:id="@+id/img_about_us"
-                                android:src="@mipmap/about_us"
-                                android:layout_weight="1"
                                 android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"/>
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:src="@mipmap/about_us" />
 
                         </LinearLayout>
+
                         <LinearLayout
                             android:id="@+id/linea2"
-                            android:orientation="vertical"
-                            app:layout_constraintLeft_toRightOf="@id/linea1"
                             android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
                             android:layout_marginLeft="8dp"
-                            android:layout_height="match_parent">
+                            android:orientation="vertical"
+                            app:layout_constraintLeft_toRightOf="@id/linea1">
 
                             <TextView
-                                android:text="邀请好友"
-                                android:textSize="14sp"
-                                android:textColor="#222222"
-                                android:gravity="center_vertical"
                                 android:id="@+id/tv_invite_friends"
-                                android:layout_weight="1"
                                 android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"/>
-                            <TextView
-                                android:text="我的推广"
-                                android:textSize="14sp"
-                                android:textColor="#222222"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
                                 android:gravity="center_vertical"
+                                android:text="邀请好友"
+                                android:textColor="#222222"
+                                android:textSize="14sp" />
+
+                            <TextView
                                 android:id="@+id/tv_my_promotion"
-                                android:layout_weight="1"
                                 android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"/>
-                            <TextView
-                                android:text="商学院"
-                                android:textSize="14sp"
-                                android:textColor="#222222"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
                                 android:gravity="center_vertical"
+                                android:text="我的推广"
+                                android:textColor="#222222"
+                                android:textSize="14sp" />
+
+                            <TextView
                                 android:id="@+id/tv_business_school"
-                                android:layout_weight="1"
                                 android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"/>
-                            <TextView
-                                android:text="我的积分"
-                                android:textSize="14sp"
-                                android:textColor="#222222"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
                                 android:gravity="center_vertical"
+                                android:text="商学院"
+                                android:textColor="#222222"
+                                android:textSize="14sp" />
+
+                            <TextView
                                 android:id="@+id/tv_integral"
-                                android:layout_weight="1"
                                 android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"/>
-                            <TextView
-                                android:text="关于我们"
-                                android:textSize="14sp"
-                                android:textColor="#222222"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
                                 android:gravity="center_vertical"
+                                android:text="我的积分"
+                                android:textColor="#222222"
+                                android:textSize="14sp" />
+
+                            <TextView
                                 android:id="@+id/tv_about_us"
-                                android:layout_weight="1"
                                 android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"/>
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="center_vertical"
+                                android:text="关于我们"
+                                android:textColor="#222222"
+                                android:textSize="14sp" />
 
                         </LinearLayout>
+
                         <LinearLayout
-                            android:orientation="vertical"
-                            android:layout_marginRight="10dp"
-                            app:layout_constraintRight_toRightOf="parent"
                             android:layout_width="wrap_content"
-                            android:layout_height="match_parent">
+                            android:layout_height="match_parent"
+                            android:layout_marginRight="10dp"
+                            android:orientation="vertical"
+                            app:layout_constraintRight_toRightOf="parent">
+
                             <ImageView
                                 android:id="@+id/img_invite_friends_into"
-                                android:src="@mipmap/more"
-                                android:layout_weight="1"
                                 android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"/>
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:src="@mipmap/more" />
+
                             <ImageView
                                 android:id="@+id/img_my_promotion_into"
-                                android:src="@mipmap/more"
-                                android:layout_weight="1"
                                 android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"/>
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:src="@mipmap/more" />
+
                             <ImageView
                                 android:id="@+id/img_business_school_into"
-                                android:src="@mipmap/more"
-                                android:layout_weight="1"
                                 android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"/>
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:src="@mipmap/more" />
+
                             <ImageView
                                 android:id="@+id/img_integral_into"
-                                android:src="@mipmap/more"
-                                android:layout_weight="1"
                                 android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"/>
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:src="@mipmap/more" />
+
                             <ImageView
                                 android:id="@+id/img_about_us_into"
-                                android:src="@mipmap/more"
-                                android:layout_weight="1"
                                 android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"/>
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:src="@mipmap/more" />
                         </LinearLayout>
 
                     </androidx.constraintlayout.widget.ConstraintLayout>
