@@ -12,7 +12,9 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
 import com.yltclient.R;
+import com.yltclient.ui.own.activities.AboutUsActivity;
 import com.yltclient.ui.own.activities.BusinessSchoolActivity;
+import com.yltclient.ui.own.activities.IntegralActivity;
 import com.yltclient.ui.own.activities.InviteFriendsActivity;
 import com.yltclient.ui.own.activities.MyPromotionActivity;
 
@@ -99,8 +101,10 @@ public class OwnFragment extends Fragment implements View.OnClickListener {
                 startActivity(new Intent(getContext(), BusinessSchoolActivity.class));
                 break;
             case R.id.img_integral_into:
+                startActivity(new Intent(getContext(), IntegralActivity.class));
                 break;
             case R.id.img_about_us_into:
+                startActivity(new Intent(getContext(), AboutUsActivity.class));
                 break;
         }
     }
