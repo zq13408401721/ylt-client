@@ -20,6 +20,16 @@
         android:background="@drawable/shape_login_background"
         android:layout_width="325dp"
         android:layout_height="400dp">
+        <ImageView
+            android:id="@+id/image_forget_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/drop_btn_down"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="15dp"
+            app:layout_constraintStart_toStartOf="parent"
+            android:rotation="90"/>
         <TextView
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
