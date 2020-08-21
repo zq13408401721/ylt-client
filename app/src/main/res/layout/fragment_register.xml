@@ -12,7 +12,6 @@
         android:drawableLeft="@mipmap/login_phone"
         android:hint="输入手机号"
         app:layout_constraintTop_toTopOf="parent"
-        android:background="@drawable/shape_edittext_border"
         android:maxLines="1"
         android:paddingTop="15dp"/>
 
@@ -24,7 +23,6 @@
         android:drawableLeft="@mipmap/login_password"
         android:hint="请输入密码"
         app:layout_constraintTop_toBottomOf="@id/et_register_phone"
-        android:background="@drawable/shape_edittext_border"
         android:paddingTop="15dp"/>
 
     <EditText
@@ -35,7 +33,6 @@
         android:drawableLeft="@mipmap/login_password"
         android:hint="确认密码"
         app:layout_constraintTop_toBottomOf="@id/et_register_password"
-        android:background="@drawable/shape_edittext_border"
         android:paddingTop="15dp"/>
 
     <EditText
@@ -46,8 +43,8 @@
         android:drawableLeft="@mipmap/login_location"
         android:hint="选择所属省市区/县"
         app:layout_constraintTop_toBottomOf="@id/et_register_passwordAgain"
-        android:background="@drawable/shape_edittext_border"
         android:paddingTop="15dp"/>
+
 
     <EditText
         android:id="@+id/et_register_invCode"
@@ -57,7 +54,6 @@
         android:drawableLeft="@mipmap/login_backups"
         android:hint="输入邀请码(必填)"
         app:layout_constraintTop_toBottomOf="@id/et_register_location"
-        android:background="@drawable/shape_edittext_border"
         android:paddingTop="15dp"/>
 
     <EditText
@@ -68,7 +64,6 @@
         android:drawableLeft="@mipmap/login_vercode"
         android:hint="验证码"
         app:layout_constraintTop_toBottomOf="@id/et_register_invCode"
-        android:background="@drawable/shape_edittext_border"
         android:paddingTop="15dp"/>
 
     <com.yltclient.common.GradientColorTextViewForManagerName
