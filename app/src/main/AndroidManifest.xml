@@ -10,7 +10,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ui.own.activities.MyPromotionActivity"></activity>
+        <activity android:name=".ui.own.activities.IntegralTurnActivity"></activity>
+        <activity android:name=".ui.own.activities.BusinessSchoolActivity" />
+        <activity android:name=".ui.own.activities.MyPromotionActivity" />
         <activity android:name=".ui.own.activities.InviteFriendsActivity" />
         <activity
             android:name=".IndexcActivity"
