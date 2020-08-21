@@ -12,8 +12,11 @@
         android:theme="@style/AppTheme">
         <activity android:name=".ui.own.activities.MyPromotionActivity"></activity>
         <activity android:name=".ui.own.activities.InviteFriendsActivity" />
+        <activity android:name=".IndexcActivity" />
+        <activity android:name=".login.activitys.ForgetActivity" />
+
         <activity
-            android:name=".IndexcActivity"
+            android:name=".login.LoginActivity"
             tools:ignore="DuplicateActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -22,8 +25,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".home.HomeActivity" />
+        <activity android:name=".login.activitys.AgreementActivity" />
         <activity android:name=".MainActivity" />
-        <activity android:name=".login.activitys.ForgetActivity" />
     </application>
 
 </manifest>

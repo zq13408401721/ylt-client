@@ -14,4 +14,9 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <style name="Login_Location_PopupWindow">
+        <item name="android:windowEnterAnimation">@anim/window_in</item>
+        <item name="android:windowExitAnimation">@anim/window_out</item>
+    </style>
+
 </resources>
