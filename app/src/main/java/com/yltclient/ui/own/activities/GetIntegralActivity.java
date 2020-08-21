@@ -13,25 +13,29 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.Unbinder;
 
-public class InviteFriendsActivity extends AppCompatActivity implements View.OnClickListener {
+public class GetIntegralActivity extends AppCompatActivity implements View.OnClickListener {
 
     private Unbinder unbinder;
     @BindView(R.id.img_back)
     ImageView imgBack;
-    @BindView(R.id.tv_copy_links)
-    TextView tvCopyLinks;
+    @BindView(R.id.img_qr)
+    ImageView imgQr;
+    @BindView(R.id.tv_get_integral_qr)
+    TextView tvGetIntegralQr;
+    @BindView(R.id.img_button)
+    ImageView imgButton;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_invite_friends);
+        setContentView(R.layout.activity_get_integral);
         unbinder = ButterKnife.bind(this);
         initView();
     }
 
     private void initView() {
         imgBack.setOnClickListener(this);
-        tvCopyLinks.setOnClickListener(this);
     }
 
     @Override
@@ -45,8 +49,6 @@ public class InviteFriendsActivity extends AppCompatActivity implements View.OnC
         switch (view.getId()){
             case R.id.img_back:
                 finish();
-                break;
-            case R.id.tv_copy_links:
                 break;
         }
     }

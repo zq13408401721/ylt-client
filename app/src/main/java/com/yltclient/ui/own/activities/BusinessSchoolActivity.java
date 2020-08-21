@@ -41,6 +41,7 @@ public class BusinessSchoolActivity extends AppCompatActivity implements View.On
     private void initView() {
         imgBack.setOnClickListener(this);
         tvIntegralTurn.setOnClickListener(this);
+        tvGetIntegral.setOnClickListener(this);
     }
 
     @Override
@@ -57,6 +58,9 @@ public class BusinessSchoolActivity extends AppCompatActivity implements View.On
                 break;
             case R.id.tv_integral_turn:
                 startActivity(new Intent(BusinessSchoolActivity.this,IntegralTurnActivity.class));
+                break;
+            case R.id.tv_get_integral:
+                startActivity(new Intent(BusinessSchoolActivity.this,GetIntegralActivity.class));
                 break;
         }
     }
