@@ -10,14 +10,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-<<<<<<< HEAD
         <activity android:name=".ui.mine.activity.IncomeDetailActivity"></activity>
         <activity android:name=".ui.own.activities.MyPromotionActivity" />
         <activity android:name=".ui.own.activities.IntegralTurnActivity"></activity>
         <activity android:name=".ui.own.activities.BusinessSchoolActivity" />
-=======
         <activity android:name=".ui.own.activities.MyPromotionActivity"></activity>
->>>>>>> c2382bf849abb38703de65df910eac76997caff4
         <activity android:name=".ui.own.activities.InviteFriendsActivity" />
         <activity
             android:name=".IndexcActivity"
