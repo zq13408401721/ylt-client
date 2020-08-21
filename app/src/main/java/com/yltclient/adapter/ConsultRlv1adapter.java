@@ -29,7 +29,7 @@ public class ConsultRlv1adapter extends RecyclerView.Adapter<RecyclerView.ViewHo
     @NonNull
     @Override
     public RecyclerView.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View inflate = LayoutInflater.from(context).inflate(R.layout.rlv1_item, null);
+        View inflate = LayoutInflater.from(context).inflate(R.layout.fragment_news_rlv1, null);
         ViewHolder viewHolder = new ViewHolder(inflate);
         return viewHolder;
     }

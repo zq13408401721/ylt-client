@@ -10,7 +10,6 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.bumptech.glide.Glide;
 import com.yltclient.R;
 import com.yltclient.bean.Rlv3Bean;
 
@@ -31,7 +30,7 @@ public class ConsultRlv2Adapter extends RecyclerView.Adapter<RecyclerView.ViewHo
     @NonNull
     @Override
     public RecyclerView.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View inflate = LayoutInflater.from(context).inflate(R.layout.rlv2_item, null);
+        View inflate = LayoutInflater.from(context).inflate(R.layout.fragment_news_rlv2, null);
         ViewHolder viewHolder = new ViewHolder(inflate);
         return viewHolder;
     }
@@ -41,7 +40,6 @@ public class ConsultRlv2Adapter extends RecyclerView.Adapter<RecyclerView.ViewHo
         ViewHolder viewHolder = (ViewHolder) holder;
         viewHolder.tvTitleRlv2Itme.setText(list.get(position).getTitle());
         viewHolder.tvDateRlv2Item.setText(list.get(position).getDate());
-        Glide.with(context).load(list.get(position).getImage()).into(viewHolder.ivImg);
     }
 
     @Override
