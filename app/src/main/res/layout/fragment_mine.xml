@@ -3,6 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#E8E8EA"
     android:orientation="vertical">
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -16,11 +17,11 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
-            android:layout_width="79dp"
-            android:layout_height="25dp"
-            android:layout_marginLeft="151.5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="151dp"
             android:layout_marginTop="52dp"
-            android:layout_marginRight="151.5dp"
+            android:layout_marginRight="151dp"
             android:text="我的矿场"
             android:textColor="@color/white"
             android:textSize="18sp"
@@ -32,20 +33,24 @@
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="471dp"
-            android:layout_marginLeft="20dp"
+            android:layout_marginLeft="10dp"
             android:layout_marginTop="98dp"
-            android:layout_marginRight="20dp"
-            android:background="@drawable/shape_login_background"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/shape_mine_background"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toTopOf="parent">
 
             <TextView
-                android:layout_width="115dp"
-                android:layout_height="36dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_marginTop="21dp"
                 android:background="@drawable/shape_text_round"
                 android:gravity="center"
+                android:paddingLeft="24dp"
+                android:paddingTop="6dp"
+                android:paddingRight="24dp"
+                android:paddingBottom="6dp"
                 android:text="FileCoin"
                 android:textColor="@color/white"
                 android:textSize="18sp"
@@ -54,8 +59,8 @@
 
             <TextView
                 android:id="@+id/tv_mine_earning"
-                android:layout_width="80.5dp"
-                android:layout_height="25dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_marginLeft="49dp"
                 android:layout_marginTop="87dp"
                 android:gravity="center"
@@ -63,6 +68,15 @@
                 android:textColor="#222222"
                 android:textSize="18sp"
                 app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="70dp"
+                android:layout_marginTop="78dp"
+                android:background="#D5D5D5"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
@@ -78,12 +92,12 @@
 
             <TextView
                 android:id="@+id/tv_mine_currency"
-                android:layout_width="88dp"
-                android:layout_height="25dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_marginTop="87dp"
                 android:layout_marginRight="49dp"
                 android:gravity="center"
-                android:text="¥52100.54"
+                android:text="¥52100"
                 android:textColor="#222222"
                 android:textSize="18sp"
                 app:layout_constraintRight_toRightOf="parent"
@@ -100,6 +114,19 @@
                 app:layout_constraintRight_toRightOf="@id/tv_mine_currency"
                 app:layout_constraintTop_toTopOf="parent" />
 
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="170dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="162dp"
+                android:scaleType="centerCrop"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -112,15 +139,16 @@
 
                 <TextView
                     android:id="@+id/tv_mine_available"
-                    android:layout_width="76.5dp"
-                    android:layout_height="24dp"
-                    android:text="0.000000"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0.000"
                     android:textColor="#222222"
                     android:textSize="18sp" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
                     android:text="FileCoin可用数量"
                     android:textSize="11sp" />
             </LinearLayout>
@@ -137,15 +165,16 @@
 
                 <TextView
                     android:id="@+id/tv_mine_used"
-                    android:layout_width="76.5dp"
-                    android:layout_height="24dp"
-                    android:text="0.000000"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0.000"
                     android:textColor="#222222"
                     android:textSize="18sp" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
                     android:text="FileCoin已提数量"
                     android:textSize="11sp" />
             </LinearLayout>
@@ -162,29 +191,34 @@
 
                 <TextView
                     android:id="@+id/tv_mine_add"
-                    android:layout_width="76.5dp"
-                    android:layout_height="24dp"
-                    android:text="0.000000"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0.000"
                     android:textColor="#222222"
                     android:textSize="18sp" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
                     android:text="FileCoin累计挖矿"
                     android:textSize="11sp" />
             </LinearLayout>
 
             <TextView
                 android:id="@+id/mine_incomeDetails"
-                android:layout_width="133dp"
-                android:layout_height="35dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_marginTop="410dp"
                 android:background="@drawable/shape_main_round"
                 android:gravity="center"
+                android:paddingLeft="15dp"
+                android:paddingTop="5dp"
+                android:paddingRight="15dp"
+                android:paddingBottom="5dp"
                 android:text="收益详情"
                 android:textColor="@color/white"
-                android:textSize="18sp"
+                android:textSize="16sp"
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintRight_toRightOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -193,20 +227,24 @@
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="471dp"
-            android:layout_marginLeft="20dp"
+            android:layout_marginLeft="10dp"
             android:layout_marginTop="581dp"
-            android:layout_marginRight="20dp"
-            android:background="@drawable/shape_login_background"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/shape_mine_background"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toTopOf="parent">
 
             <TextView
-                android:layout_width="115dp"
-                android:layout_height="36dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_marginTop="21dp"
                 android:background="@drawable/shape_text_round"
                 android:gravity="center"
+                android:paddingLeft="24dp"
+                android:paddingTop="6dp"
+                android:paddingRight="24dp"
+                android:paddingBottom="6dp"
                 android:text="我的矿机"
                 android:textColor="@color/white"
                 android:textSize="18sp"
@@ -216,7 +254,7 @@
             <TextView
                 android:id="@+id/main_assetDetails"
                 android:layout_width="wrap_content"
-                android:layout_height="20dp"
+                android:layout_height="wrap_content"
                 android:layout_marginTop="30dp"
                 android:layout_marginRight="30dp"
                 android:text="资产详情 >"
@@ -228,7 +266,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="20dp"
-                android:layout_marginTop="75.5dp"
+                android:layout_marginTop="76dp"
                 android:layout_marginRight="20dp"
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintRight_toRightOf="parent"

@@ -3,6 +3,7 @@ package com.yltclient.ui.own.activities;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -17,6 +18,8 @@ public class InviteFriendsActivity extends AppCompatActivity implements View.OnC
     private Unbinder unbinder;
     @BindView(R.id.img_back)
     ImageView imgBack;
+    @BindView(R.id.tv_copy_links)
+    TextView tvCopyLinks;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,6 +31,7 @@ public class InviteFriendsActivity extends AppCompatActivity implements View.OnC
 
     private void initView() {
         imgBack.setOnClickListener(this);
+        tvCopyLinks.setOnClickListener(this);
     }
 
     @Override
@@ -41,6 +45,8 @@ public class InviteFriendsActivity extends AppCompatActivity implements View.OnC
         switch (view.getId()){
             case R.id.img_back:
                 finish();
+                break;
+            case R.id.tv_copy_links:
                 break;
         }
     }

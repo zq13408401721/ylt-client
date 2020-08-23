@@ -1,4 +1,4 @@
-package com.yltclient.login.fragment;
+package com.yltclient.ui.login.fragment;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -14,7 +14,7 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
 import com.yltclient.R;
-import com.yltclient.login.activitys.ForgetActivity;
+import com.yltclient.ui.login.activitys.ForgetActivity;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -46,7 +46,6 @@ public class LoginFragment extends Fragment {
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-
     }
 
     @OnClick(R.id.tv_login_forget)

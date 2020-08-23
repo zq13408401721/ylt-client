@@ -1,5 +1,6 @@
 package com.yltclient.ui.mine;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -15,17 +16,31 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.yltclient.R;
 import com.yltclient.adapter.mine.MineRvAdapter;
+import com.yltclient.ui.mine.activity.IncomeDetailActivity;
 
-public class MineFragment extends Fragment {
+import butterknife.BindView;
+import butterknife.ButterKnife;
+import butterknife.Unbinder;
 
-    private TextView tv_mine_earning;
-    private TextView tv_mine_currency;
-    private TextView tv_mine_available;
-    private TextView tv_mine_used;
-    private TextView tv_mine_add;
-    private TextView mine_incomeDetails;
-    private TextView main_assetDetails;
-    private RecyclerView rv_mine;
+public class MineFragment extends Fragment implements View.OnClickListener {
+    private Unbinder unbinder;
+
+    @BindView(R.id.tv_mine_earning)
+    TextView tv_mine_earning;
+    @BindView(R.id.tv_mine_currency)
+    TextView tv_mine_currency;
+    @BindView(R.id.tv_mine_available)
+    TextView tv_mine_available;
+    @BindView(R.id.tv_mine_used)
+    TextView tv_mine_used;
+    @BindView(R.id.tv_mine_add)
+    TextView tv_mine_add;
+    @BindView(R.id.mine_incomeDetails)//收益详情
+    TextView mine_incomeDetails;
+    @BindView(R.id.main_assetDetails)
+    TextView main_assetDetails;
+    @BindView(R.id.rv_mine)
+    RecyclerView rv_mine;
 
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
@@ -36,15 +51,43 @@ public class MineFragment extends Fragment {
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View inflate = inflater.inflate(R.layout.fragment_mine, container, false);
-        initView(inflate);
+        unbinder = ButterKnife.bind(this, inflate);
         return inflate;
     }
 
-    private void initView(View inflate) {
-        rv_mine=inflate.findViewById(R.id.rv_mine);
+    @Override
+    public void onActivityCreated(@Nullable Bundle savedInstanceState) {
+        super.onActivityCreated(savedInstanceState);
+        initView();
+    }
+
+    @Override
+    public void onDestroy() {
+        super.onDestroy();
+        unbinder.unbind();
+    }
+
+
+    private void initView() {
         rv_mine.setLayoutManager(new LinearLayoutManager(getActivity()));
-        rv_mine.addItemDecoration(new DividerItemDecoration(getActivity(),DividerItemDecoration.VERTICAL));
+        rv_mine.addItemDecoration(new DividerItemDecoration(getActivity(), DividerItemDecoration.VERTICAL));
 
         rv_mine.setAdapter(new MineRvAdapter(getActivity()));
+
+        //收益详情
+        mine_incomeDetails.setOnClickListener(this);
+    }
+
+    @Override
+    public void onClick(View view) {
+        switch (view.getId()) {
+
+            case R.id.mine_incomeDetails:
+                //跳转到收益详情界面
+                Intent intent = new Intent(getActivity(), IncomeDetailActivity.class);
+                startActivity(intent);
+                break;
+
+        }
     }
 }
