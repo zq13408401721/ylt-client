@@ -6,6 +6,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import androidx.annotation.Nullable;
@@ -17,6 +18,10 @@ import com.yltclient.ui.own.activities.BusinessSchoolActivity;
 import com.yltclient.ui.own.activities.IntegralActivity;
 import com.yltclient.ui.own.activities.InviteFriendsActivity;
 import com.yltclient.ui.own.activities.MyPromotionActivity;
+import com.yltclient.ui.own.activities.PersonalInfomationActivity;
+import com.yltclient.ui.own.activities.ReceivingActivity;
+import com.yltclient.ui.own.activities.SecurityActivity;
+import com.yltclient.ui.own.activities.WalletActivity;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -31,14 +36,12 @@ public class OwnFragment extends Fragment implements View.OnClickListener {
     TextView tvName;
     @BindView(R.id.tv_temporary)
     TextView tvTemporary;
-    @BindView(R.id.img_wallet)
-    ImageView imgWallet;
-    @BindView(R.id.tv_wallet)
-    TextView tvWallet;
-    @BindView(R.id.img_delivery_address)
-    ImageView imgDeliveryAddress;
-    @BindView(R.id.tv_delivery_address)
-    TextView tvDeliveryAddress;
+    @BindView(R.id.linea_wallet)
+    LinearLayout wallet;
+    @BindView(R.id.linea_delivery_address)
+    LinearLayout deliveryAddress;
+    @BindView(R.id.linea_security_center)
+    LinearLayout securityCenter;
     @BindView(R.id.img_security_center)
     ImageView imgSecurityCenter;
     @BindView(R.id.tv_security_center)
@@ -75,11 +78,15 @@ public class OwnFragment extends Fragment implements View.OnClickListener {
     }
 
     private void initView() {
+        tvName.setOnClickListener(this);
         imgInviteFriendsInto.setOnClickListener(this);
         imgMyPromotionInto.setOnClickListener(this);
         imgBussinessSchoolInto.setOnClickListener(this);
         imgIntergralInto.setOnClickListener(this);
         imgAboutUsInto.setOnClickListener(this);
+        wallet.setOnClickListener(this);
+        deliveryAddress.setOnClickListener(this);
+        securityCenter.setOnClickListener(this);
     }
 
     @Override
@@ -91,6 +98,18 @@ public class OwnFragment extends Fragment implements View.OnClickListener {
     @Override
     public void onClick(View view) {
         switch (view.getId()){
+            case R.id.tv_name:
+                startActivity(new Intent(getContext(), PersonalInfomationActivity.class));
+                break;
+            case R.id.linea_wallet:
+                startActivity(new Intent(getContext(), WalletActivity.class));
+                break;
+            case R.id.linea_security_center:
+                startActivity(new Intent(getContext(), SecurityActivity.class));
+                break;
+            case R.id.linea_delivery_address:
+                startActivity(new Intent(getContext(), ReceivingActivity.class));
+                break;
             case R.id.img_invite_friends_into:
                 startActivity(new Intent(getContext(), InviteFriendsActivity.class));
                 break;
