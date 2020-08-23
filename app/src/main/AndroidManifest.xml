@@ -12,6 +12,7 @@
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
         <activity android:name=".ui.own.activities.PersonalInfomationActivity"></activity>
+        <activity android:name=".ui.own.activities.PersonalInfomationActivity" />
         <activity android:name=".home.JustHostActivity" />
         <activity android:name=".home.ComfirmActivity" />
         <activity android:name=".ui.own.activities.AboutUsActivity" />
