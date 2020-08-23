@@ -18,6 +18,7 @@ import com.yltclient.ui.own.activities.BusinessSchoolActivity;
 import com.yltclient.ui.own.activities.IntegralActivity;
 import com.yltclient.ui.own.activities.InviteFriendsActivity;
 import com.yltclient.ui.own.activities.MyPromotionActivity;
+import com.yltclient.ui.own.activities.PersonalInfomationActivity;
 import com.yltclient.ui.own.activities.ReceivingActivity;
 import com.yltclient.ui.own.activities.SecurityActivity;
 import com.yltclient.ui.own.activities.WalletActivity;
@@ -77,6 +78,7 @@ public class OwnFragment extends Fragment implements View.OnClickListener {
     }
 
     private void initView() {
+        tvName.setOnClickListener(this);
         imgInviteFriendsInto.setOnClickListener(this);
         imgMyPromotionInto.setOnClickListener(this);
         imgBussinessSchoolInto.setOnClickListener(this);
@@ -96,6 +98,9 @@ public class OwnFragment extends Fragment implements View.OnClickListener {
     @Override
     public void onClick(View view) {
         switch (view.getId()){
+            case R.id.tv_name:
+                startActivity(new Intent(getContext(), PersonalInfomationActivity.class));
+                break;
             case R.id.linea_wallet:
                 startActivity(new Intent(getContext(), WalletActivity.class));
                 break;

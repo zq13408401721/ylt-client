@@ -4,14 +4,17 @@
     package="com.yltclient">
 
     <application
-        android:usesCleartextTraffic="true"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
-        <activity android:name=".ui.own.activities.AboutUsActivity"></activity>
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true">
+        <activity android:name=".ui.own.activities.PersonalInfomationActivity"></activity>
+        <activity android:name=".home.JustHostActivity" />
+        <activity android:name=".home.ComfirmActivity" />
+        <activity android:name=".ui.own.activities.AboutUsActivity" />
         <activity android:name=".ui.own.activities.IntegralActivity" />
         <activity android:name=".ui.own.activities.TurnRecordActivity" />
         <activity android:name=".ui.own.activities.GetIntegralActivity" />
@@ -23,11 +26,11 @@
         <activity android:name=".ui.news.activity.NewInformationActivity" />
         <activity android:name=".ui.news.activity.NewDetailActivity" />
         <activity android:name=".MainActivity" />
-        <activity android:name=".ui.login.LoginActivity"/>
-        <activity android:name=".ui.login.activitys.ForgetActivity"/>
-        <activity android:name=".ui.own.activities.WalletActivity"/>
-        <activity android:name=".ui.own.activities.ReceivingActivity"/>
-        <activity android:name=".ui.own.activities.SecurityActivity"/>
+        <activity android:name=".ui.login.LoginActivity" />
+        <activity android:name=".ui.login.activitys.ForgetActivity" />
+        <activity android:name=".ui.own.activities.WalletActivity" />
+        <activity android:name=".ui.own.activities.ReceivingActivity" />
+        <activity android:name=".ui.own.activities.SecurityActivity" />
         <activity
             android:name=".IndexcActivity"
             tools:ignore="DuplicateActivity">
@@ -37,7 +40,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".home.HomeActivity" />
     </application>
 
 </manifest>
