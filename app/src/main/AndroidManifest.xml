@@ -11,6 +11,9 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".ui.own.activities.AboutUsActivity"></activity>
+        <activity android:name=".ui.mine.activity.AssetDetailActivity"/>
+        <activity android:name=".ui.mine.activity.ChargeMoneyActivity"/>
+        <activity android:name=".ui.mine.activity.ChargeRecordActivity"/>
         <activity android:name=".ui.own.activities.IntegralActivity" />
         <activity android:name=".ui.own.activities.TurnRecordActivity" />
         <activity android:name=".ui.own.activities.GetIntegralActivity" />
