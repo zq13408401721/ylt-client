@@ -10,33 +10,31 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".home.JustHostActivity"></activity>
+        <activity android:name=".home.ComfirmActivity"></activity>
         <activity android:name=".ui.own.activities.AboutUsActivity"></activity>
-        <activity android:name=".ui.mine.activity.AssetDetailActivity"/>
-        <activity android:name=".ui.mine.activity.ChargeMoneyActivity"/>
-        <activity android:name=".ui.mine.activity.ChargeRecordActivity"/>
         <activity android:name=".ui.own.activities.IntegralActivity" />
         <activity android:name=".ui.own.activities.TurnRecordActivity" />
         <activity android:name=".ui.own.activities.GetIntegralActivity" />
         <activity android:name=".ui.own.activities.IntegralTurnActivity" />
         <activity android:name=".ui.own.activities.BusinessSchoolActivity" />
         <activity android:name=".ui.mine.activity.IncomeDetailActivity" />
+        <activity android:name=".ui.mine.activity.ChargeRecordActivity"/>
+        <activity android:name=".ui.mine.activity.ChargeMoneyActivity"/>
+        <activity android:name=".ui.mine.activity.AssetDetailActivity"/>
         <activity android:name=".ui.own.activities.MyPromotionActivity" />
         <activity android:name=".ui.own.activities.InviteFriendsActivity" />
         <activity android:name=".ui.news.activity.NewInformationActivity" />
         <activity android:name=".ui.news.activity.NewDetailActivity" />
         <activity android:name=".MainActivity" />
-        <activity android:name=".ui.login.activitys.ForgetActivity" />
-        <activity android:name=".ui.login.LoginActivity" />
         <activity
             android:name=".IndexcActivity"
             tools:ignore="DuplicateActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".home.HomeActivity" />
     </application>
 
 </manifest>

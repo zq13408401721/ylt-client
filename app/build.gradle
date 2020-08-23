@@ -1,8 +1,9 @@
 apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
 
 android {
     compileSdkVersion 30
-    buildToolsVersion "30.0.0"
+    buildToolsVersion "30.0.1"
 
     defaultConfig {
         applicationId "com.yltclient"
@@ -69,12 +70,18 @@ dependencies {
 
     //高斯模糊
     implementation 'jp.wasabeef:glide-transformations:3.0.1'
-
+    implementation "androidx.core:core-ktx:+"
+    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:2.2.0"
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
     //视频缓存
     implementation 'com.danikula:videocache:2.7.1'
 
     implementation 'cn.jzvd:jiaozivideoplayer:6.2.4'
     implementation 'com.github.bumptech.glide:glide:4.3.1'
     implementation 'org.sufficientlysecure:html-textview:3.9'
+
+}
+repositories {
+    mavenCentral()
 
 }

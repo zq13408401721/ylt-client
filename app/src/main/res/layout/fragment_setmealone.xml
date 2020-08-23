@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/meal_LinearLayout"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_margin="20dp"
+        android:background="@mipmap/perinfo"
+        android:elevation="2dp"
+        android:paddingLeft="20dp"
+        android:paddingTop="20dp"
+        android:paddingBottom="20dp">
+
+        <ImageView
+            android:id="@+id/meal_ImageView"
+            android:layout_width="30sp"
+            android:layout_height="30sp"
+            android:background="@mipmap/about_us"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/meal_TextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:text="A类型主机"
+            android:textColor="#090000"
+            android:textSize="20dp"
+            app:layout_constraintLeft_toRightOf="@id/meal_ImageView"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/meal_TextView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="20dp"
+            android:text="主机介绍"
+            app:layout_constraintBottom_toBottomOf="@id/meal_TextView"
+            app:layout_constraintRight_toRightOf="parent" />
+
+        <ImageView
+            android:id="@+id/meal_ImageView2"
+            android:layout_width="2dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="35dp"
+            android:src="@mipmap/about_us"
+            app:layout_constraintLeft_toLeftOf="@id/meal_ImageView"
+            app:layout_constraintRight_toRightOf="@id/meal_ImageView"
+            app:layout_constraintTop_toBottomOf="@id/meal_TextView" />
+
+        <TextView
+            android:id="@+id/meal_TextView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="35dp"
+            android:text="整体占比：1/24"
+            android:textSize="15dp"
+            app:layout_constraintLeft_toRightOf="@id/meal_ImageView2"
+            app:layout_constraintRight_toRightOf="@id/meal_TextView"
+            app:layout_constraintTop_toBottomOf="@id/meal_ImageView" />
+
+        <TextView
+            android:id="@+id/tv4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="架构：4U"
+            android:textSize="15dp"
+            app:layout_constraintLeft_toLeftOf="@id/meal_TextView3"
+            app:layout_constraintTop_toBottomOf="@id/meal_TextView3" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="每月附赠3个月时效6T硬盘"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="@id/meal_ImageView2" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shape_text_round_left"
+            android:text="价格：715USDT"
+            android:textSize="20dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toRightOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <Button
+        android:id="@+id/mealone_buy"
+        android:layout_width="160dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@mipmap/request_button_bg"
+        android:text="立即购买" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="*直接购买赠送正品国行125G全网通iphoneX，购买前请填写收货信息" />
+
+</LinearLayout>
