@@ -1,6 +1,6 @@
 package com.yltclient.bean.mine;
 
-public class IncomeDetailBean {
+public class AssetDetailBean {
     private String type;
     private String date;
     private String coinNum;
@@ -29,7 +29,7 @@ public class IncomeDetailBean {
         this.coinNum = coinNum;
     }
 
-    public IncomeDetailBean(String type, String date, String coinNum) {
+    public AssetDetailBean(String type, String date, String coinNum) {
         this.type = type;
         this.date = date;
         this.coinNum = coinNum;

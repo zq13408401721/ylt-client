@@ -1,6 +1,7 @@
 package com.yltclient.adapter.mine;
 
 import android.content.Context;
+import android.graphics.Color;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -10,17 +11,16 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.yltclient.R;
+import com.yltclient.bean.mine.AssetDetailBean;
 import com.yltclient.bean.mine.IncomeDetailBean;
 
 import java.util.List;
 
-import butterknife.BindView;
-
-public class IncomeDetailRvAdapter extends RecyclerView.Adapter<IncomeDetailRvAdapter.ViewHolder> {
+public class AssetDetailRvAdapter extends RecyclerView.Adapter<AssetDetailRvAdapter.ViewHolder> {
     Context context;
-    List<IncomeDetailBean> list;
+    List<AssetDetailBean> list;
 
-    public IncomeDetailRvAdapter(Context context, List<IncomeDetailBean> list) {
+    public AssetDetailRvAdapter(Context context, List<AssetDetailBean> list) {
         this.context = context;
         this.list = list;
     }
@@ -35,8 +35,14 @@ public class IncomeDetailRvAdapter extends RecyclerView.Adapter<IncomeDetailRvAd
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
 
         holder.tvDate.setText(list.get(position).getDate());
+        if (list.get(position).getType().equals("购买矿机")){
+            holder.tvCoinNum.setTextColor(Color.RED);
+        }else {
+            holder.tvCoinNum.setTextColor(Color.parseColor("#599754"));
+        }
         holder.tvCoinNum.setText(list.get(position).getCoinNum()+" FileCoin");
         holder.tvType.setText(list.get(position).getType());
+
 
     }
 
