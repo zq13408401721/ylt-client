@@ -16,6 +16,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.yltclient.R;
 import com.yltclient.adapter.mine.MineRvAdapter;
+import com.yltclient.ui.mine.activity.AssetDetailActivity;
 import com.yltclient.ui.mine.activity.IncomeDetailActivity;
 
 import butterknife.BindView;
@@ -37,7 +38,7 @@ public class MineFragment extends Fragment implements View.OnClickListener {
     TextView tv_mine_add;
     @BindView(R.id.mine_incomeDetails)//收益详情
     TextView mine_incomeDetails;
-    @BindView(R.id.main_assetDetails)
+    @BindView(R.id.main_assetDetails)//资产详情
     TextView main_assetDetails;
     @BindView(R.id.rv_mine)
     RecyclerView rv_mine;
@@ -76,6 +77,7 @@ public class MineFragment extends Fragment implements View.OnClickListener {
 
         //收益详情
         mine_incomeDetails.setOnClickListener(this);
+        main_assetDetails.setOnClickListener(this);
     }
 
     @Override
@@ -84,8 +86,11 @@ public class MineFragment extends Fragment implements View.OnClickListener {
 
             case R.id.mine_incomeDetails:
                 //跳转到收益详情界面
-                Intent intent = new Intent(getActivity(), IncomeDetailActivity.class);
-                startActivity(intent);
+                startActivity(new Intent(getActivity(), IncomeDetailActivity.class));
+                break;
+            case R.id.main_assetDetails:
+                //跳转到资产详情界面
+                startActivity(new Intent(getActivity(), AssetDetailActivity.class));
                 break;
 
         }

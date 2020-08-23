@@ -22,6 +22,9 @@
         <activity android:name=".ui.own.activities.IntegralTurnActivity" />
         <activity android:name=".ui.own.activities.BusinessSchoolActivity" />
         <activity android:name=".ui.mine.activity.IncomeDetailActivity" />
+        <activity android:name=".ui.mine.activity.ChargeRecordActivity"/>
+        <activity android:name=".ui.mine.activity.ChargeMoneyActivity"/>
+        <activity android:name=".ui.mine.activity.AssetDetailActivity"/>
         <activity android:name=".ui.own.activities.MyPromotionActivity" />
         <activity android:name=".ui.own.activities.InviteFriendsActivity" />
         <activity android:name=".ui.news.activity.NewInformationActivity" />
