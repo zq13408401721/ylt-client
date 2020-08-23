@@ -89,6 +89,7 @@
                             app:layout_constraintTop_toBottomOf="@id/img_head">
 
                             <LinearLayout
+                                android:id="@+id/linea_wallet"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
@@ -112,6 +113,7 @@
                             </LinearLayout>
 
                             <LinearLayout
+                                android:id="@+id/linea_delivery_address"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
@@ -135,6 +137,7 @@
                             </LinearLayout>
 
                             <LinearLayout
+                                android:id="@+id/linea_security_center"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
