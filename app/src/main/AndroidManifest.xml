@@ -22,8 +22,8 @@
         <activity android:name=".ui.news.activity.NewInformationActivity" />
         <activity android:name=".ui.news.activity.NewDetailActivity" />
         <activity android:name=".MainActivity" />
-        <activity android:name=".login.activitys.ForgetActivity" />
-        <activity android:name=".login.LoginActivity" />
+        <activity android:name=".ui.login.activitys.ForgetActivity" />
+        <activity android:name=".ui.login.LoginActivity" />
         <activity
             android:name=".IndexcActivity"
             tools:ignore="DuplicateActivity">
