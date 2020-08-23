@@ -67,8 +67,6 @@
         </androidx.recyclerview.widget.RecyclerView>
     </LinearLayout>
 
-
-
     <ImageView
         android:id="@+id/img_button"
         app:layout_constraintBottom_toBottomOf="parent"
