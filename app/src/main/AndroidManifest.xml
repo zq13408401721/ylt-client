@@ -11,7 +11,10 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".ui.own.activities.PersonalInfomationActivity"></activity>
+        <activity android:name=".ui.own.activities.DistrictAgentActivity"></activity>
+        <activity android:name=".ui.own.activities.CityAgencyActivity" />
+        <activity android:name=".ui.own.activities.ProxyMechanismActivity" />
+        <activity android:name=".ui.own.activities.PersonalInfomationActivity" />
         <activity android:name=".ui.own.activities.PersonalInfomationActivity" />
         <activity android:name=".home.JustHostActivity" />
         <activity android:name=".home.ComfirmActivity" />
@@ -22,9 +25,9 @@
         <activity android:name=".ui.own.activities.IntegralTurnActivity" />
         <activity android:name=".ui.own.activities.BusinessSchoolActivity" />
         <activity android:name=".ui.mine.activity.IncomeDetailActivity" />
-        <activity android:name=".ui.mine.activity.ChargeRecordActivity"/>
-        <activity android:name=".ui.mine.activity.ChargeMoneyActivity"/>
-        <activity android:name=".ui.mine.activity.AssetDetailActivity"/>
+        <activity android:name=".ui.mine.activity.ChargeRecordActivity" />
+        <activity android:name=".ui.mine.activity.ChargeMoneyActivity" />
+        <activity android:name=".ui.mine.activity.AssetDetailActivity" />
         <activity android:name=".ui.own.activities.MyPromotionActivity" />
         <activity android:name=".ui.own.activities.InviteFriendsActivity" />
         <activity android:name=".ui.news.activity.NewInformationActivity" />
