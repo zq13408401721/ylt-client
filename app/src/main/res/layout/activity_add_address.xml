@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#eeeeee"
+    tools:context="com.yltclient.ui.own.activities.AddAddressActivity">
+
+    <RelativeLayout
+        android:id="@+id/wallet_re"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/own_wallet_bg"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/img_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="22dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="15dp"
+            android:background="@drawable/ic_baseline_arrow_back_ios_24" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="添加钱包地址"
+            android:textColor="#fafafa"
+            android:textSize="18sp" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="11dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginRight="11dp"
+        android:background="@drawable/wallet_money"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/wallet_re">
+
+        <TextView
+            android:id="@+id/wallet_money"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="15dp"
+            android:text="钱包地址"
+            android:textColor="#222222"
+            android:textSize="15sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/wallet_money"
+            android:layout_marginLeft="14dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="11dp"
+            android:text="输入或长按粘贴地址"
+            android:textSize="14sp"
+            android:textColor="#888888"/>
+
+        <ImageView
+            android:id="@+id/img_sweep"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="16dp"
+            android:layout_marginRight="12dp"
+            android:src="@mipmap/sweep" />
+
+        <View
+            android:id="@+id/view"
+            android:layout_below="@id/img_sweep"
+            android:background="#d5d5d5"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"/>
+        <TextView
+            android:id="@+id/tv_notes"
+            android:text="备注"
+            android:textColor="#222222"
+            android:textSize="15sp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginVertical="15dp"
+            android:layout_below="@id/view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:text="点此输入备注"
+            android:layout_below="@id/view"
+            android:textSize="14sp"
+            android:textColor="#888888"
+            android:layout_marginLeft="44dp"
+            android:layout_marginTop="15dp"
+            android:layout_toRightOf="@+id/tv_notes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <View
+            android:id="@+id/view2"
+            android:layout_below="@id/tv_notes"
+            android:background="#d5d5d5"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"/>
+
+        <TextView
+            android:id="@+id/btn_save"
+            android:text="保存"
+            android:textSize="17sp"
+            android:textColor="@color/white"
+            android:gravity="center"
+            android:layout_below="@id/view2"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="22dp"
+            android:layout_marginTop="29dp"
+            android:background="@mipmap/btn_save_bg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    </RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

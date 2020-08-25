@@ -7,7 +7,7 @@
     tools:context="com.yltclient.ui.own.activities.SecurityActivity">
 
     <RelativeLayout
-        android:id="@+id/wallet_re"
+        android:id="@+id/re"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@drawable/own_wallet_bg"
@@ -15,6 +15,7 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <ImageView
+            android:id="@+id/img_back"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="22dp"
@@ -27,15 +28,14 @@
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
             android:layout_centerVertical="true"
-            android:text="钱包地址"
+            android:text="安全中心"
             android:textColor="#fafafa"
             android:textSize="25dp" />
-
 
     </RelativeLayout>
 
     <RelativeLayout
-        android:id="@+id/secur_re"
+        android:id="@+id/rel"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="11dp"
@@ -43,119 +43,74 @@
         android:layout_marginRight="11dp"
         android:background="@drawable/wallet_money"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/wallet_re">
+        app:layout_constraintTop_toBottomOf="@+id/re">
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/secur_lin1"
-            android:orientation="horizontal">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textSize="20dp"
-                android:layout_marginTop="15dp"
-                android:layout_marginLeft="20dp"
-                android:layout_marginBottom="10dp"
-                android:textStyle="bold"
-                android:text="收货人"/>
-            <EditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="15dp"
-                android:layout_marginLeft="39dp"
-                android:hint="八填鸭"
-                android:textSize="20dp"
-                android:background="@null"/>
-
-        </LinearLayout>
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:background="#D5D5D5"
-            android:layout_marginLeft="16dp"
-            android:layout_marginRight="21dp"
-            android:layout_below="@+id/secur_lin1"
-            android:id="@+id/view1"/>
-        <LinearLayout
-            android:layout_below="@+id/view1"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/secur_lin2"
-            android:orientation="horizontal">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textSize="20dp"
-                android:layout_marginTop="10dp"
-                android:layout_marginLeft="20dp"
-                android:layout_marginBottom="10dp"
-                android:textStyle="bold"
-                android:text="联系电话"/>
-            <EditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:layout_marginLeft="39dp"
-                android:hint="16638301245"
-                android:textSize="20dp"
-                android:background="@null"/>
-
-        </LinearLayout>
-
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:background="#D5D5D5"
-            android:layout_marginLeft="16dp"
-            android:layout_marginRight="21dp"
-            android:layout_below="@+id/secur_lin2"
-            android:id="@+id/view2"/>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/secur_address"
-            android:layout_below="@+id/view2"
-            android:text="详细地址"
-            android:textSize="20dp"
-            android:layout_marginTop="10dp"
+            android:textSize="15sp"
+            android:textColor="#222222"
+            android:layout_marginTop="15dp"
             android:layout_marginLeft="20dp"
-            android:textStyle="bold"/>
-
-
+            android:layout_marginBottom="10dp"
+            android:textStyle="bold"
+            android:text="登录密码"/>
 
         <ImageView
-            android:layout_width="110dp"
-            android:layout_height="32dp"
-            android:background="@mipmap/secur_moey"
-            android:layout_below="@+id/secur_address"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="52dp"
-            android:layout_marginBottom="23dp"/>
-        
-        <TextView
+            android:id="@+id/qwd_into"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="修改信息"
-            android:textColor="#ffb6ea7f"
-            android:textSize="23dp"
-            android:layout_marginTop="54dp"
-            android:layout_marginBottom="23dp"
-            android:layout_centerHorizontal="true"
-            android:layout_below="@+id/secur_address"
-            />
+            android:layout_marginTop="15dp"
+            android:layout_marginRight="12dp"
+            android:layout_alignParentRight="true"
+            android:background="@mipmap/security_intent"/>
 
+        <TextView
+            android:layout_below="@id/qwd_into"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            android:textColor="#222222"
+            android:layout_marginTop="24dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginBottom="20dp"
+            android:textStyle="bold"
+            android:text="交易密码"/>
+
+        <TextView
+            android:id="@+id/tv_set"
+            android:text="未设置"
+            android:textSize="13sp"
+            android:textColor="#888888"
+            android:layout_below="@id/qwd_into"
+            android:layout_toLeftOf="@id/deal_into"
+            android:layout_marginTop="26dp"
+            android:layout_marginRight="12dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <ImageView
+            android:id="@+id/deal_into"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:layout_marginRight="12dp"
+            android:layout_below="@id/qwd_into"
+            android:layout_alignParentRight="true"
+            android:background="@mipmap/security_intent"/>
     </RelativeLayout>
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="31dp"
-        android:layout_marginTop="4dp"
-        android:text="*仅可添加一个收货地址"
-        android:textSize="16dp"
+    <Button
+        android:id="@+id/btn_exit"
+        android:text="退出登录"
+        android:textSize="17sp"
+        android:textColor="@color/white"
+        android:background="@mipmap/login_button"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/secur_re" />
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/rel"
+        android:layout_marginTop="50dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

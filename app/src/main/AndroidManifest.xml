@@ -11,7 +11,10 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".ui.own.activities.DistrictAgentActivity"></activity>
+        <activity android:name=".ui.own.activities.TradingCodeActivity"></activity>
+        <activity android:name=".ui.own.activities.AccessCodeActivity" />
+        <activity android:name=".ui.own.activities.AddAddressActivity" />
+        <activity android:name=".ui.own.activities.DistrictAgentActivity" />
         <activity android:name=".ui.own.activities.CityAgencyActivity" />
         <activity android:name=".ui.own.activities.ProxyMechanismActivity" />
         <activity android:name=".ui.own.activities.PersonalInfomationActivity" />

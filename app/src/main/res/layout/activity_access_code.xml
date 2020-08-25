@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#eeeeee"
-    tools:context=".ui.own.activities.ReceivingActivity">
+    tools:context=".ui.own.activities.AccessCodeActivity">
 
     <TextView
         app:layout_constraintTop_toTopOf="parent"
@@ -23,7 +23,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
         <TextView
-            android:text="收货地址"
+            android:text="登陆密码"
             android:textSize="18sp"
             android:textColor="@color/white"
             android:layout_centerInParent="true"
@@ -42,8 +42,8 @@
         android:layout_height="wrap_content">
 
         <TextView
-            android:id="@+id/txt_receive"
-            android:text="收货人"
+            android:id="@+id/txt_old_qwd"
+            android:text="旧密码"
             android:textSize="14sp"
             android:textColor="#222222"
             android:layout_margin="10dp"
@@ -51,27 +51,27 @@
             android:layout_height="wrap_content"/>
 
         <TextView
-            android:id="@+id/tv_receive"
-            android:text="八田鸭"
+            android:id="@+id/tv_old_qwd"
+            android:text="请输入旧密码"
             android:textSize="14sp"
             android:textColor="#888888"
             android:layout_marginVertical="10dp"
             android:layout_marginLeft="29dp"
-            android:layout_toRightOf="@id/txt_receive"
+            android:layout_toRightOf="@id/txt_old_qwd"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
 
         <View
             android:id="@+id/view"
             android:background="#d5d5d5"
-            android:layout_below="@id/txt_receive"
+            android:layout_below="@id/txt_old_qwd"
             android:layout_margin="5dp"
             android:layout_width="match_parent"
             android:layout_height="1dp"/>
 
         <TextView
-            android:id="@+id/txt_photo"
-            android:text="联系电话"
+            android:id="@+id/txt_new_qwd"
+            android:text="新密码"
             android:textSize="14sp"
             android:textColor="#222222"
             android:layout_margin="10dp"
@@ -80,13 +80,13 @@
             android:layout_height="wrap_content"/>
 
         <TextView
-            android:id="@+id/tv_photo"
-            android:text="13022315632"
+            android:id="@+id/tv_new_qwd"
+            android:text="请输入新密码"
             android:textSize="14sp"
             android:textColor="#888888"
             android:layout_marginVertical="10dp"
-            android:layout_marginLeft="19dp"
-            android:layout_toRightOf="@id/txt_photo"
+            android:layout_marginLeft="28dp"
+            android:layout_toRightOf="@id/txt_new_qwd"
             android:layout_below="@id/view"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
@@ -94,14 +94,14 @@
         <View
             android:id="@+id/view1"
             android:background="#d5d5d5"
-            android:layout_below="@id/txt_photo"
+            android:layout_below="@id/txt_new_qwd"
             android:layout_margin="5dp"
             android:layout_width="match_parent"
             android:layout_height="1dp"/>
 
         <TextView
-            android:id="@+id/txt_location"
-            android:text="详细地址"
+            android:id="@+id/txt_pwd"
+            android:text="确认密码"
             android:textSize="14sp"
             android:textColor="#222222"
             android:layout_margin="10dp"
@@ -110,9 +110,9 @@
             android:layout_height="wrap_content"/>
 
         <TextView
-            android:id="@+id/tv_location"
-            android:text="广东省 深圳市 龙岗区 坂田街道 城市山海中心C栋211"
-            android:layout_toRightOf="@+id/txt_location"
+            android:id="@+id/tv_pwd"
+            android:text="请输入确认密码"
+            android:layout_toRightOf="@+id/txt_pwd"
             android:textSize="14sp"
             android:textColor="#888888"
             android:layout_marginVertical="10dp"
@@ -121,27 +121,25 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
 
+        <View
+            android:id="@+id/view3"
+            android:background="#d5d5d5"
+            android:layout_below="@id/tv_pwd"
+            android:layout_margin="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"/>
+
         <Button
             android:id="@+id/btn_change"
-            android:text="修改信息"
+            android:text="确认修改"
             android:textSize="16sp"
-            android:textColor="#B6EA7F"
-            android:background="@mipmap/btn_change_bg"
-            android:layout_below="@id/tv_location"
+            android:textColor="@color/white"
+            android:background="@mipmap/request_button_bg"
+            android:layout_below="@id/tv_pwd"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="32dp"
             android:layout_marginBottom="16dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
     </RelativeLayout>
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="31dp"
-        android:layout_marginTop="4dp"
-        android:text="*仅可添加一个收货地址"
-        android:textSize="16dp"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/rel"/>
 </androidx.constraintlayout.widget.ConstraintLayout>

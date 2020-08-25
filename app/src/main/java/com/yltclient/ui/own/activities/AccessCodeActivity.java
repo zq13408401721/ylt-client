@@ -12,7 +12,7 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.Unbinder;
 
-public class ReceivingActivity extends AppCompatActivity implements View.OnClickListener {
+public class AccessCodeActivity extends AppCompatActivity implements View.OnClickListener {
 
     private Unbinder unbinder;
     @BindView(R.id.img_back)
@@ -21,7 +21,7 @@ public class ReceivingActivity extends AppCompatActivity implements View.OnClick
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_receiving);
+        setContentView(R.layout.activity_access_code);
         unbinder = ButterKnife.bind(this);
         initView();
     }

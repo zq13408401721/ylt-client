@@ -12,22 +12,22 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.Unbinder;
 
-public class ReceivingActivity extends AppCompatActivity implements View.OnClickListener {
+public class AddAddressActivity extends AppCompatActivity implements View.OnClickListener {
 
     private Unbinder unbinder;
     @BindView(R.id.img_back)
-    ImageView imgBack;
+    ImageView imghBack;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_receiving);
+        setContentView(R.layout.activity_add_address);
         unbinder = ButterKnife.bind(this);
         initView();
     }
 
     private void initView() {
-        imgBack.setOnClickListener(this);
+        imghBack.setOnClickListener(this);
     }
 
     @Override
